@@ -1,0 +1,160 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="vn.viviu.fxpfitnesshulahoop.ui.main.SelectWorkoutFragment">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:id="@+id/imv_back"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/txt_select_workout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Select Workout"
+        android:maxLength="23"
+        android:ellipsize="end"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_one"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_workout"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/txt_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_three"
+        app:layout_constraintStart_toStartOf="@+id/txt_one"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_workout" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_three"
+        android:text="2"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_workout"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+
+    <SeekBar
+        android:id="@+id/seekbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:max="90"
+        android:min="1"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progress="20"
+        android:progressDrawable="@drawable/drawable_seekbar"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_workout" />
+
+    <LinearLayout
+        android:id="@+id/lnl_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#372d45"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar1">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:np_dividerColor="@android:color/transparent"
+            app:np_fadingEdgeEnabled="false"
+            app:np_max="90"
+            app:np_min="1"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="#FFFFFF"
+            app:np_selectedTextSize="24sp"
+            app:np_textColor="#9E9E9E"
+            app:np_textSize="20sp"
+            app:np_wheelItemCount="9"
+            app:np_wrapSelectorWheel="false" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_title_select_workout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bkg_day_content_workout_select_sc"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_seekbar">
+
+        <TextView
+            android:id="@+id/title_select_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upper Body Day"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/subtitle_select_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Màn hình chọn Workout / Premium Workout Select sẽ luôn đưa người dùng đến ngày sau ngày kết thúc cuối cùng. Vui lòng sử dụng Trọng lượng nâng cao như một tham chiếu cho "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start_workout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buy_btn_normal"
+        android:text="Bắt đầu tập"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_title_select_workout" />
+</android.support.constraint.ConstraintLayout>

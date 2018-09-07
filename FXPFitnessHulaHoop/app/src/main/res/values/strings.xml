@@ -1,0 +1,23 @@
+<resources>
+        <string name="error">Mật khẩu tối thiểu có 6 ký tự trong đó ít nhất \n1 chữ Hoa,1 chữ thường, 1 số, 1 ký tự thuộc
+dãy !@#$%^*()_= </string>
+    <string name="app_name">FXP Fitness Hula Hoop</string>
+    <string name="background">background</string>
+    <string name="loading">Đang tải...</string>
+    <string name="logo">logo</string>
+    <string name="description">
+       Chào mừng bạn đến với 90 Day Challenge. Thử thách thể hình này đã được tạo cho những người nghiêm túc cam kết với hành trình thể dục của họ và những người muốn đốt cháy lượng mỡ và calo, tăng cơ bắp, và thay đổi toàn bộ cơ thể của họ!
+
+        \n\nThử thách này được tạo thành từ nhiều bài tập cường độ cao, cường độ cao nhất giúp thúc đẩy đốt cháy calo tối ưu thông qua một loạt các bài tập đã được chứng minh!
+
+        \n\nMở 90 Day Challenge của bạn hôm nay để có thể bắt tay vào việc tập luyện. Như đã được chứng minh, chúng tôi sẽ giúp bạn đốt cháy cơ thể, tiếp thêm động lực tập luyện , và có được những kết quả mà bạn mong muốn!
+    </string>
+    <string name="home">Trang chủ</string>
+    <string name="exercises">Bài tập</string>
+    <string name="nutrition">Dinh dưỡng</string>
+    <string name="setting">Cài đặt</string>
+    <string name="premium_workout">Thư viện</string>
+
+    <string name="facebook_app_id">2102763336648110</string>
+
+</resources>

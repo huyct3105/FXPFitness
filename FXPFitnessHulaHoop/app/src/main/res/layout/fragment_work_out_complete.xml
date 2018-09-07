@@ -1,0 +1,176 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="vn.viviu.fxpfitnesshulahoop.ui.workoutcomplete.WorkOutCompleteFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="@+id/text_title_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_title_bar"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/text_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Hoàn thành"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_back"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bkg_content_workout_complete_scr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/text_congratulations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Xin chúc mừng!"
+            android:textColor="#FFFFFF"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_day_completed"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/workout_complete_screen_completed_icon"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="DAY 65\nwas completed"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_congratulations" />
+
+        <ScrollView
+            android:id="@+id/scroll_view_description"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_day_completed">
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Congratulations! You just completed today's Cardio Hoop HIIT session! During this workout you burned some serious fuel as well as toned the thighs and glutes.  Keep up the Great Work! See you tomorrow for your Cardio Hoop HIIT session!"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                />
+
+        </ScrollView>
+
+
+
+        <View
+            android:id="@+id/divider_description"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_view_description" />
+
+        <TextView
+            android:id="@+id/text_title_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Chia sẻ:"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_description" />
+
+        <Button
+            android:id="@+id/button_share_facebook"
+            android:layout_width="150dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:text="Facebook"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/facebook_icon"
+            android:padding="8dp"
+            android:drawablePadding="8dp"
+            android:background="@drawable/background_button_share"
+            app:layout_constraintEnd_toStartOf="@+id/button_share_twitter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_share" />
+
+        <Button
+            android:id="@+id/button_share_twitter"
+            android:layout_width="150dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:text="Twitter"
+            android:drawableStart="@drawable/twitter_icon"
+            android:background="@drawable/background_button_share"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_share_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_share" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
